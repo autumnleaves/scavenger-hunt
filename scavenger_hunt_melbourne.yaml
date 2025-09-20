@@ -1,8 +1,8 @@
 # Melbourne CBD Find-It Hunt (Per-Target Scoring Variant)
 
-version: 3.4
+version: 3.6
 meta:
-  title: "Melbourne Core Find-It"
+  title: "Mon's Birthday Hunt!"
   mode: "Light Competition (per target)"
   duration_target_minutes: 180
   meeting_point: "Federation Square steps"
@@ -11,16 +11,16 @@ meta:
   scoring_style: "Each discrete target = 1 point for each player who completes it. Some cooperative moments (10,14)."
   equipment: [charged phones, small cash/card, myki, pen]
   tie_breaker_order: [most_targets_total, earliest_last_target_time]
-  notes: "No winner bonuses. Just count targets you personally achieve. If both achieve a target, both score it. Bragging rights decided by speed only where stated."
+  notes: "Birthday edition: celebratory, playful pacing. No winner bonuses—just count targets you personally achieve. If both achieve a target, both score it. Bragging rights decided by speed only where stated. Sprinkle spontaneous birthday compliments or memories any time a challenge is fully completed." 
 
 scoring:
   points_per_target: 1
-  total_targets: 32   # Updated sum after enumeration (verify if later edits change)
-  finish_bonus_if_under_minutes: 165
-  finish_bonus_points_each: 2
-  comment: "Finish bonus only if EVERY target attempted (even if not all succeeded)."
+  total_targets: 32   # Sum of enumerated targets
+  completion_bonus_challenges_required: 10   # Number of challenges both players must fully finish
+  completion_bonus_points_each: 2
+  comment: "Bonus +2 each once BOTH players have fully completed (all targets) in at least 10 distinct challenges (skipped do not count)."
 
-# Ordered route rationale (v3.4 – per-target scoring, diversified geek venues, coop reset points):
+# Ordered route rationale (v3.5 – per-target scoring, challenge-count bonus, diversified geek venues, coop reset points):
 # 1-2 Warm-up movement & visual scanning.
 # 3 Palate + sensory break (coffee ritual).
 # 4 Quiet architectural pivot.
@@ -37,7 +37,7 @@ scoring:
 
 challenges:
   - id: 1
-    title: Angle + Hidden Letter
+    title: Lines & Letter Launch
     location: "Federation Square"
     suggested_location: "Federation Square – Main Plaza near ACMI facade"
     address: "Swanston St & Flinders St, Melbourne VIC 3000"
@@ -49,8 +49,10 @@ challenges:
     route_note: "Immediate start point warm-up before lane walk east then north-west."
     indoor_outdoor: "outdoor"
     targets:
-      - "Angle selfie: both in frame with a prominent architectural line leading toward a point or edge."
-      - "Letter 'M': photo of a real-world printed / mounted / carved 'M' (no typing your own)."
+      - short: "Angle selfie"
+        detail: "Both players in one selfie that intentionally includes a strong architectural line (edge / beam / roofline / designed paving alignment / deliberate curve) that leads the eye toward a point or vanishing direction. Frame shoulders upward; line must be clearly visible and not accidental."
+      - short: "Letter 'M' capture"
+        detail: "Photo of an existing physical, printed, mounted, engraved, carved or painted capital 'M' found on-site (signage, plaque, sculpture). No drawing, typing, tracing in condensation, or forming it with hands. Crop so the 'M' is legible."
     definition_note: "Architectural line = continuous structural/design edge (façade corner, roofline, beam, rail, deliberate paving alignment or sweeping designed curve) guiding the eye; NOT shadows, temporary objects, cables, people queues, random cracks."
     speed_note: "Optional brag only: first to present valid 'M' can crow; no extra points."
 
@@ -67,17 +69,22 @@ challenges:
     route_note: "1–2 min walk from Fed Square before coffee."
     indoor_outdoor: "outdoor"
     targets:
-      - "A piece with a clearly visible animal (not abstract)"
-      - "A tag containing exactly 3 characters (letters/numbers)"
-      - "One artwork dominated by a single color (≥70% same hue)"
-      - "A stencil (clean edges, sprayed)"
-      - "A piece featuring a crown symbol"
+      - short: "Animal piece"
+        detail: "Graffiti / street art showing a recognizable non‑abstract animal (whole or partial) where species is guessable (e.g., cat, bird). Mythical creatures do NOT count unless clearly animal hybrid."
+      - short: "3‑char tag"
+        detail: "A tag consisting of exactly three alphanumeric characters (letters or digits). No punctuation, arrows, or extra marks beyond normal stylistic flares; stray dots allowed only if part of style not extra letters."
+      - short: "Single‑colour dominant"
+        detail: "An artwork where one hue (allowing tonal variations/light-dark) covers ~70% or more of visible painted area. Minor accents OK. Photograph should show enough context to judge dominance."
+      - short: "Stencil piece"
+        detail: "Spray-painted image created with a cut template: crisp repeated edges, uniform fill or shading indicating stencil use. Hand freeform outlines don’t count."
+      - short: "Crown symbol"
+        detail: "Any piece featuring a stylized crown shape (≥3 points). Could be above a name or incorporated in a character. Must be intentional, not random triangles."
     rules: "Each player must photograph all 5 targets."
     success_condition: "Score 1 point per listed target you personally capture."
-    speed_note: "If one finishes all 5 first, just bragging rights."
+    speed_note: "If one finishes all 5 first, just bragging rights."  
 
   - id: 3
-    title: Coffee Hunt Blind Test
+    title: Twin Cup Taste Trial
     location: "Degraves / Centre Place"
     suggested_location: "Degraves St pair of small specialty cafes (e.g., Cup of Truth + nearby)"
     address: "Degraves St, Melbourne VIC 3000"
@@ -89,14 +96,17 @@ challenges:
     route_note: "Continue west/north from Hosier via Flinders Ln."
     indoor_outdoor: "mixed"
     targets:
-      - "Procure Cup A (unique cafe)."
-      - "Procure Cup B (different cafe)."
-      - "Complete blind ranking (simultaneous reveal)."
+      - short: "Cup A"
+        detail: "Purchase or obtain a coffee from Cafe A. Must be a different physical venue and brand than Cup B (logo / cup design distinct)."
+      - short: "Cup B"
+        detail: "Second coffee from a different cafe (no shared franchise if possible). Should be comparable style (e.g., two flat whites) unless mutually agreed otherwise."
+      - short: "Blind ranking"
+        detail: "Each player tastes both (eyes closed / swapped position) then writes a secret A/B preference. On reveal both show ranking simultaneously. Completion = both rankings shown (agreement not required)."
     ritual: "Keep ranking carded until both ready; announcement = reveal."
     speed_note: "If latte art debate: clearer art earns informal brag only."
 
   - id: 4
-    title: Library Dual Angle
+    title: Dome & Detail Duel
     location: "State Library Dome"
     suggested_location: "La Trobe Reading Room (dome) upper level rail"
     address: "328 Swanston St, Melbourne VIC 3000"
@@ -108,8 +118,10 @@ challenges:
     route_note: "Short northbound walk up Swanston after coffee."
     indoor_outdoor: "mixed"
     targets:
-      - "Wide dome shot (balcony rail curve visible)."
-      - "Tight geometric detail (no people)."
+      - short: "Wide dome shot"
+        detail: "Capture a landscape/portrait photo from an upper level showing the dome volume and the curving balcony rail arc. Some desks acceptable; avoid heavy people blocking the architectural feel."
+      - short: "Geometric detail"
+        detail: "Close-up of a repeating pattern (bookshelves, baluster, ceiling panel, window or molding) with NO humans. Emphasize lines / symmetry / geometry."
     aesthetic_note: "Symmetry brag only; both still score if criteria met."
 
   - id: 5
@@ -125,9 +137,12 @@ challenges:
     route_note: "Cut west from Swanston via Little Collins."
     indoor_outdoor: "indoor"
     targets:
-      - "Constantine comic (cover readable)."
-      - "Overly horny figurine (tasteful partial shot ok)."
-      - "Retro franchise item (pre-2000 origin)."
+      - short: "Constantine comic"
+        detail: "A Hellblazer / Constantine issue or collected edition with title readable. Spin‑off appearances (e.g., Justice League Dark) count if Constantine clearly on cover."
+      - short: "Suggestive figurine"
+        detail: "Figurine whose pose/outfit is overtly sexualized or comedic in a horny way (maintain store etiquette: frame to avoid explicit packaging)."
+      - short: "Retro franchise item"
+        detail: "Merch representing a franchise whose first release predates year 2000 (game, film, comic). Show item plus enough packaging/logo to confirm origin."
     etiquette: "Avoid blocking aisles; no flash on reflective packaging."
     speed_note: "First to complete trio = brag only."
 
@@ -144,7 +159,8 @@ challenges:
     route_note: "Shift to distinct venue post-Minotaur for variety."
     indoor_outdoor: "indoor"
     targets:
-      - "One valid Pikachu OR Eevee wearable head item (branding visible)."
+      - short: "Pikachu/Eevee head wearable"
+        detail: "A hat, headband, hood, beanie, cap, or ears featuring Pikachu OR Eevee (official branding tag or recognizable licensed design). Single photo with product context (shelf/rack)."
     verification: "Include shelf/rack context in photo."
     speed_note: "Clearer official tag = brag if simultaneous."
 
@@ -161,9 +177,12 @@ challenges:
     route_note: "Second distinct geek venue broadens selection before books."
     indoor_outdoor: "indoor"
     targets:
-      - "Starter line member (any generation)."
-      - "Electric type (distinct from starter if starter is Electric)."
-      - "Legendary or Mythical (clearly labeled / iconic)."
+      - short: "Starter line"
+        detail: "A Pokémon that is part of an official starter evolutionary line (any generation, any stage: e.g., Bulbasaur / Ivysaur / Venusaur)."
+      - short: "Electric type"
+        detail: "An Electric-type Pokémon merch item (plush/figure) distinct from your starter pick if that starter is also Electric (so Pikachu can't double for both)."
+      - short: "Legendary/Mythical"
+        detail: "Item depicting a Legendary or Mythical Pokémon (box art icon, label, or unmistakable design: e.g., Mewtwo, Rayquaza, Arceus)."
     constraints:
       - "Distinct physical products or clearly different prints."
     speed_note: "Earliest debut generation = brag tie-break."
@@ -181,9 +200,12 @@ challenges:
     route_note: "Short eastward shift along Collins from Minotaur cluster."
     indoor_outdoor: "indoor"
     targets:
-      - "The Silmarillion (title legible)."
-      - "Vampire-themed manga/graphic novel volume."
-      - "Book by an author named Mon / Monisha (any genre)."
+      - short: "The Silmarillion"
+        detail: "Locate any edition where the cover spine or front clearly reads ‘The Silmarillion’. Anthologies with excerpt don't count."
+      - short: "Vampire manga/graphic novel"
+        detail: "A bound volume (manga or Western GN) where vampires are central (title art, synopsis, or obvious character)."
+      - short: "Author named Mon/Monisha"
+        detail: "Book whose credited author first name starts with 'Mon' (Mon, Mona, Monique, Monisha, etc.). Show cover with name legible."
     speed_note: "Non-fiction companion clarity = brag if simultaneous."
 
   - id: 9
@@ -199,7 +221,8 @@ challenges:
     route_note: "Natural pivot after Dymocks while moving toward laneway relax."
     indoor_outdoor: "outdoor"
     targets:
-      - "Photo of moving tram with legible route number."
+      - short: "Moving tram + route"
+        detail: "Action shot of a tram in motion (blur acceptable) where the route number (or alphanumeric code) is readable. Stationary at full stop does NOT count; slight roll acceptable."
     speed_note: "Sharper route number = brag only."
 
   - id: 10
@@ -216,8 +239,10 @@ challenges:
     indoor_outdoor: "indoor"
     cooperative: true
     targets:
-      - "Agree on a simple rule (e.g., no phones / no adjectives)."
-      - "Maintain rule through ordering + consumption."
+      - short: "Agree rule"
+        detail: "Jointly decide and verbally lock a light constraint (e.g., no phones, only whisper metaphors, no using the letter 'e'). Must be mutually acknowledged before ordering."
+      - short: "Maintain rule"
+        detail: "Both adhere to chosen rule from ordering start until leaving venue / finishing items. Any violation cancels this target for the violator only."
     note: "If rule broken prematurely, that target not scored for breaker."
 
   - id: 11
@@ -233,8 +258,10 @@ challenges:
     route_note: "Short return toward Swanston from laneway."
     indoor_outdoor: "indoor"
     targets:
-      - "Photo of a qualifying Metroidvania title (case or shelf label)."
-      - "One-sentence justification citing exploration + ability/upgrade gate + backtracking."
+      - short: "Metroidvania title"
+        detail: "Photo of game box / shelf label recognized as Metroidvania (progression via acquiring abilities that unlock earlier unreachable areas). Collection compilations okay if at least one included qualifies."
+      - short: "Justification"
+        detail: "One clear sentence naming the gating mechanic (e.g., ‘Double jump unlock opens earlier vertical shafts’) AND referencing exploration/backtracking. Must be specific, not generic."
     acceptable_examples: ["Hollow Knight", "Ori and the Will of the Wisps", "Metroid Dread", "Castlevania collection", "Blasphemous", "Axiom Verge"]
     disallowed:
       - "Pure linear platformers"
@@ -260,7 +287,8 @@ challenges:
       - "Ask permission if store policy unclear about photos (if refused, describe item verbally and both accept)."
     verification: "Photo (or agreed verbal description if photos disallowed)."
     targets:
-      - "One photo (or accepted description) of a 'strange' novelty item."
+      - short: "Strange novelty item"
+        detail: "Most unusual / themed / oddly engineered item (shape, gimmick, mash‑up). If photos disallowed: write a 1‑line description both agree accurately captures it."
     vote_note: "Mutual vote for brag only; coin flip if deadlock."
     discretion_note: "Keep phones low; avoid capturing other patrons."
 
@@ -277,8 +305,10 @@ challenges:
     route_note: "Golden-hour attempt if timing aligns."
     indoor_outdoor: "outdoor"
     targets:
-      - "Heritage vs modern single frame."
-      - "Lines contrast: vertical vs horizontal emphasis shot."
+      - short: "Heritage vs modern"
+        detail: "Single frame juxtaposing at least one older/heritage façade and a clearly modern structure (glass/steel or contemporary form). Both should be identifiable in same shot."
+      - short: "Lines contrast"
+        detail: "Photo emphasizing interplay of strong vertical lines versus horizontal (e.g., tower grid behind rooftop seating). Angle should make both direction sets obvious."
     weather_alt: "Indoor elevated atrium acceptable."
     aesthetic_note: "Strongest contrast brag only."
 
@@ -296,10 +326,12 @@ challenges:
     indoor_outdoor: "indoor"
     cooperative: true
     targets:
-      - "Choose a flavor you haven't had in the last year (or new combo)."
-      - "Joint cheers photo together."
+      - short: "New/recent flavour"
+        detail: "Order a gelato/dessert flavour (or combo) you personally have not had in ≥12 months (honour system). Mix-ins count as new only if base + mix combo is novel to you."
+      - short: "Cheers photo"
+        detail: "Both players’ desserts in one celebratory frame (hands or cups/spoons) showing cooperative finale moment."
     note: "No speed element—cool-down."
 
-tracking_tip: "Make a grid: rows = challenge IDs; columns = targets enumerated. Tick each you complete. Sum ticks + finish bonus (if earned)."
-finish: "If all challenges attempted and done under 165 minutes, each adds +2 bonus points."
-winner_rule: "Higher total targets + finish bonus (if gained) wins. Tie -> earliest time of final target completion. Remaining tie -> mutual victory."
+tracking_tip: "Grid: challenges x targets. Tick per player. Mark a challenge COMPLETE only when BOTH have every target. Once 10 challenges are COMPLETE, add +2 each."
+finish: "Completion bonus: when BOTH players have fully completed >=10 challenges (unskipped), each adds +2 points (one-time)."
+winner_rule: "Higher total targets + completion bonus (if earned) wins. Tie -> earliest time of the 10th mutual completion. Remaining tie -> mutual victory."

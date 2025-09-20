@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mon's Birthday Hunt! v3.6</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+  <header class="app-header">
+  <h1>Mon's Birthday Hunt! <span id="version">v3.6</span> <span class="birthday-badge" aria-label="Birthday">🎉</span></h1>
+    <div class="scoreboard" id="scoreboard">
+      <div class="player-score" data-player="Tom">Tom: <span class="score" id="score-tom">0</span></div>
+      <div class="player-score" data-player="Mon">Mon: <span class="score" id="score-mon">0</span></div>
+      <div class="bonus-control" aria-live="polite"></div>
+    </div>
+    <div class="controls-row">
+      <button id="filterAll" class="filter active">All</button>
+      <button id="filterRemaining" class="filter">Remaining</button>
+    </div>
+  </header>
+
+  <main id="challengeList" class="challenge-list" aria-live="polite"></main>
+
+  <footer class="app-footer">
+  <small>Birthday edition – celebrate Mon! Local-only (saved in this browser). | Tap number to toggle progress; tap anywhere else in a target row for details. | Long-press challenge header to collapse/expand all.</small>
+  </footer>
+
+  <script src="assets/script.js"></script>
+</body>
+</html>
