@@ -51,6 +51,7 @@ challenges:
     targets:
       - "Angle selfie: both in frame with a prominent architectural line leading toward a point or edge."
       - "Letter 'M': photo of a real-world printed / mounted / carved 'M' (no typing your own)."
+    definition_note: "Architectural line = continuous structural/design edge (façade corner, roofline, beam, rail, deliberate paving alignment or sweeping designed curve) guiding the eye; NOT shadows, temporary objects, cables, people queues, random cracks."
     speed_note: "Optional brag only: first to present valid 'M' can crow; no extra points."
 
   - id: 2
