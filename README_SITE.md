@@ -1,18 +1,25 @@
-# Melbourne Hunt Web App (v3.5)
+# Melbourne Hunt Web App (v3.6 Local)
 
-A lightweight static, mobile-first tracker for the Melbourne scavenger hunt. Built with plain HTML/CSS/JS so it can deploy directly via GitHub Pages.
+Mobile‑first, zero‑dependency (no build step) tracker for the Melbourne CBD birthday scavenger hunt. Pure HTML/CSS/JS + localStorage. This version intentionally rolls back an experimental realtime backend so it works fully offline again.
 
 ## Features
 
-- Dynamic rendering of 14 challenges / 32 targets
-- Per-target ticking for two players (Tom & Mon)
-- Cooperative challenge identification (#10, #14)
+- 14 challenges / 32 targets (per‑target scoring)
+- Two players (Tom & Mon) each tick targets independently
+- Quick cycle button per target (none → Tom → Mon → both → none)
+- Player chips for direct toggling
+- Location pill with Google Maps link + detailed modal view (primary, suggested, backups)
+- Target detail modal (Enter / click row) with rich descriptions
+- Cooperative challenges flagged (e.g. #10, #14)
 - Skip toggle per challenge
-- Automatic completion bonus (+2) when both fully finish ≥10 challenges
-- Local persistence (localStorage)
-- Export / Import progress JSON
-- Filter (All vs Remaining) & challenge-level progress bars
-- Long-press a challenge title to collapse/expand all
+- Automatic completion bonus (+2 for each) after ≥10 fully completed challenges (all targets by both, not skipped)
+- Progress bars & All / Remaining filter
+- Long‑press any challenge title (650ms) to collapse/expand all
+- Confetti celebration when bonus triggers
+- Accessible focus & keyboard interactions (Enter/Space opens details)
+- Pure local persistence (localStorage) — no server required
+
+Removed (compared to early drafts): Export / Import / Reset buttons (kept code lean). Realtime sync backend experiment has been retired for now; see “Re‑introducing Sync Later”.
 
 ## Directory
 
@@ -26,18 +33,32 @@ site/
 
 ## Deployment (GitHub Pages)
 
-1. Commit and push the `site` directory to `main` (already present).
-2. In the repository settings: Pages -> Build from root `/ (main)` or choose `/root` depending on GitHub UI; simplest: move contents into `/docs` if you prefer auto-detection.
-3. If using `site/` specifically, you can:
-   - Settings -> Pages -> Source: `Deploy from a branch`
-   - Branch: `main` and Folder: `/site`
-4. Save; wait for Pages to build (1–2 mins). URL: `https://<username>.github.io/<repo>/`.
+Two options:
+
+### 1. (Recommended) GitHub Actions Workflow (auto)
+
+Already included: `.github/workflows/deploy.yml` which publishes the `site/` folder on every push to `main`.
+
+Enable Pages once:
+1. Repo Settings → Pages → Build and deployment → Source: GitHub Actions.
+2. Save. First push to `main` (or manual Run workflow) will publish.
+3. Final URL: `https://<username>.github.io/<repo>/` (root of the Pages site serves contents of `site/`).
+
+Artifacts: The action uploads `site/` as a Pages artifact, then deploys with official `deploy-pages` action. A `.nojekyll` file prevents unwanted Jekyll processing.
+
+### 2. Branch Folder (manual legacy)
+
+If you prefer without Actions: Settings → Pages → Source: `Deploy from a branch`, Branch: `main`, Folder: `/site`.
+
+### Cache Busting Tip
+
+If you make rapid JS/CSS edits and want to ensure clients get the latest, append a version query to asset links (e.g., `style.css?v=3.6.1`). For this simple static setup you can also rely on hard refresh (Ctrl+F5).
 
 ## Data Model
 
 ```json
 State = {
-  "version": "3.5",
+  "version": "3.6",
   "bonusAwarded": false,
   "challenges": [
     { "id": 1, "skipped": false, "targets": [ { "Tom": false, "Mon": false }, ... ] },
@@ -50,30 +71,44 @@ Exported JSON matches this schema.
 
 ## Versioning
 
-If you update the hunt (e.g., new targets), increment `huntData.version` in `script.js` to avoid loading stale saved state. Old saved state will be discarded automatically when version mismatch occurs.
+Increment `huntData.version` in `script.js` when you materially change the challenge or target list. Saved progress from older versions is automatically ignored (fresh state created). Current version: 3.6.
 
 ## Customisation
 
-- Add players: adjust `huntData.players` and state shape logic (extend target objects to include new player keys).
-- Change colour scheme: tweak CSS variables at top of `style.css`.
-- Add timing or timestamps: append timestamp fields to target toggle logic.
+- Add players: extend `huntData.players` (then modify `defaultState()` to include new keys per target).
+- Colour scheme: adjust CSS variables near top of `style.css`.
+- Timestamps / history: add fields inside toggle handlers before `saveState()`.
+- Extra metadata: augment challenge objects (e.g., difficulty) and display in render loop.
 
 ## Completion Bonus Logic
 
-The app auto-awards a one-time +2 points to both players once *at least 10* challenges are fully completed by both (all targets ticked, not skipped). Progress toward this threshold is shown near the scores.
+One‑time +2 for both players once ≥10 challenges are fully completed (every target ticked by both and not skipped). Progress live‑updates; confetti fires exactly when awarded.
 
 ## Accessibility Notes
 
-- Buttons have clear focus states via colour shift.
-- Collapse controls are explicit; long-press is an enhancement, not required.
-- Further improvement: add ARIA-expanded on collapse toggles (future enhancement).
+- Visible focus outlines & colour shifts on interactive elements.
+- Target detail modal is keyboard dismissible (Esc) and trap‑free (simple overlay deletion) keeping page scroll position.
+- Long‑press is additive; standard buttons remain explicit.
+- Potential future enhancement: add `aria-expanded` to collapse toggles & focus return after modal close.
 
-## Future Enhancements (Ideas)
+## Re‑introducing Sync Later (Optional)
 
-- Offline PWA manifest + service worker
-- Timestamp log & timeline export
-- Dark/light theme toggle
-- Player avatar initials instead of text labels
+Earlier we experimented with a lightweight Node/Express polling backend for multi‑device live sync. It was removed to simplify running on any phone instantly. If you want it back:
+
+1. Recreate a `server/` folder with an Express app exposing `/state`, `/toggle{,Cycle}`, `/skip`.
+2. Add a polling fetch in `script.js` guarded by a query param (e.g., `?sync=1`).
+3. On each local change, POST delta and optimistically update UI.
+4. Keep localStorage as fallback if server unreachable.
+
+Potential future upgrades if reintroduced: WebSocket push, optimistic conflict markers, presence indicators.
+
+## Future Ideas (Local Mode)
+
+- Offline PWA manifest + install banner
+- Optional export/import reinstated as advanced panel
+- Dark / light theme toggle
+- Timestamped activity log / share sheet
+- Web share target for quick photo attaching notes (manual linking)
 
 ## License
 
