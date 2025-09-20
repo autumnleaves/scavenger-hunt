@@ -1,0 +1,304 @@
+# Melbourne CBD Find-It Hunt (Per-Target Scoring Variant)
+
+version: 3.4
+meta:
+  title: "Melbourne Core Find-It"
+  mode: "Light Competition (per target)"
+  duration_target_minutes: 180
+  meeting_point: "Federation Square steps"
+  end_point: "Gelato / dessert"
+  players: [Tom, Mon]
+  scoring_style: "Each discrete target = 1 point for each player who completes it. Some cooperative moments (10,14)."
+  equipment: [charged phones, small cash/card, myki, pen]
+  tie_breaker_order: [most_targets_total, earliest_last_target_time]
+  notes: "No winner bonuses. Just count targets you personally achieve. If both achieve a target, both score it. Bragging rights decided by speed only where stated."
+
+scoring:
+  points_per_target: 1
+  total_targets: 32   # Updated sum after enumeration (verify if later edits change)
+  finish_bonus_if_under_minutes: 165
+  finish_bonus_points_each: 2
+  comment: "Finish bonus only if EVERY target attempted (even if not all succeeded)."
+
+# Ordered route rationale (v3.4 – per-target scoring, diversified geek venues, coop reset points):
+# 1-2 Warm-up movement & visual scanning.
+# 3 Palate + sensory break (coffee ritual).
+# 4 Quiet architectural pivot.
+# 5 Geek anchor (broad franchise density) before splitting venues.
+# 6 Wearable specificity at Moko Select (variety).
+# 7 Trio taxonomy puzzle at Critical Hit.
+# 8 Literary shift (books/manga cross-genre).
+# 9 Transit motion capture micro-target.
+# 10 Intentional chill rule (cooperative reset).
+# 11 Genre definition micro-justification (Metroidvania).
+# 12 Humorous adult oddity (respectful, brief).
+# 13 Vertical contrast visual framing.
+# 14 Sweet cooperative closure.
+
+challenges:
+  - id: 1
+    title: Angle + Hidden Letter
+    location: "Federation Square"
+    suggested_location: "Federation Square – Main Plaza near ACMI facade"
+    address: "Swanston St & Flinders St, Melbourne VIC 3000"
+    backups:
+      - name: "Atrium edge (NGV entrance side)"
+        note: "If plaza events obstruct"
+      - name: "St Paul’s Cathedral frontage"
+        note: "Large signage letters for 'M' potential"
+    route_note: "Immediate start point warm-up before lane walk east then north-west."
+    indoor_outdoor: "outdoor"
+    targets:
+      - "Angle selfie: both in frame with a prominent architectural line leading toward a point or edge."
+      - "Letter 'M': photo of a real-world printed / mounted / carved 'M' (no typing your own)."
+    speed_note: "Optional brag only: first to present valid 'M' can crow; no extra points."
+
+  - id: 2
+    title: Hosier Lane Photo Set
+    location: "Hosier Lane"
+    suggested_location: "Hosier Lane – enter from Flinders Ln near Russell St"
+    address: "Hosier Ln, Melbourne VIC 3000"
+    backups:
+      - name: "Rutledge Lane"
+        note: "Spillover graffiti if targets scarce"
+      - name: "AC/DC Lane"
+        note: "If Hosier overly crowded"
+    route_note: "1–2 min walk from Fed Square before coffee."
+    indoor_outdoor: "outdoor"
+    targets:
+      - "A piece with a clearly visible animal (not abstract)"
+      - "A tag containing exactly 3 characters (letters/numbers)"
+      - "One artwork dominated by a single color (≥70% same hue)"
+      - "A stencil (clean edges, sprayed)"
+      - "A piece featuring a crown symbol"
+    rules: "Each player must photograph all 5 targets."
+    success_condition: "Score 1 point per listed target you personally capture."
+    speed_note: "If one finishes all 5 first, just bragging rights."
+
+  - id: 3
+    title: Coffee Hunt Blind Test
+    location: "Degraves / Centre Place"
+    suggested_location: "Degraves St pair of small specialty cafes (e.g., Cup of Truth + nearby)"
+    address: "Degraves St, Melbourne VIC 3000"
+    backups:
+      - name: "Centre Place cafe (Jungle Juice)"
+        note: "If Degraves seats full"
+      - name: "Dukes Coffee Roasters (Flinders Ln)"
+        note: "Higher-end espresso alt"
+    route_note: "Continue west/north from Hosier via Flinders Ln."
+    indoor_outdoor: "mixed"
+    targets:
+      - "Procure Cup A (unique cafe)."
+      - "Procure Cup B (different cafe)."
+      - "Complete blind ranking (simultaneous reveal)."
+    ritual: "Keep ranking carded until both ready; announcement = reveal."
+    speed_note: "If latte art debate: clearer art earns informal brag only."
+
+  - id: 4
+    title: Library Dual Angle
+    location: "State Library Dome"
+    suggested_location: "La Trobe Reading Room (dome) upper level rail"
+    address: "328 Swanston St, Melbourne VIC 3000"
+    backups:
+      - name: "Queens Hall / exterior façade"
+        note: "If dome access restricted or queue high"
+      - name: "Front lawn architectural detail"
+        note: "Fallback wide + detail outdoors"
+    route_note: "Short northbound walk up Swanston after coffee."
+    indoor_outdoor: "mixed"
+    targets:
+      - "Wide dome shot (balcony rail curve visible)."
+      - "Tight geometric detail (no people)."
+    aesthetic_note: "Symmetry brag only; both still score if criteria met."
+
+  - id: 5
+    title: Minotaur Multiverse Mix
+    location: "Minotaur Entertainment"
+    suggested_location: "Main comics & figurines floor"
+    address: "264 Little Collins St, Melbourne VIC 3000"
+    backups:
+      - name: "Critical Hit (Queen St)"
+        note: "Alternate geek merch if Minotaur closed"
+      - name: "EB Games + Zing (Swanston St)"
+        note: "For Constantine & retro item substitutes"
+    route_note: "Cut west from Swanston via Little Collins."
+    indoor_outdoor: "indoor"
+    targets:
+      - "Constantine comic (cover readable)."
+      - "Overly horny figurine (tasteful partial shot ok)."
+      - "Retro franchise item (pre-2000 origin)."
+    etiquette: "Avoid blocking aisles; no flash on reflective packaging."
+    speed_note: "First to complete trio = brag only."
+
+  - id: 6
+    title: Pokémon Wearable Hunt
+    location: "Pop culture / anime or game merch store"
+    suggested_location: "Moko Select (anime/merch boutique)"
+    address: "(Verify current CBD address for Moko Select)"
+    backups:
+      - name: "Minotaur apparel/hat section"
+        note: "If Moko lacks headgear"
+      - name: "EB Games + Zing (Swanston St)"
+        note: "Fallback apparel"
+    route_note: "Shift to distinct venue post-Minotaur for variety."
+    indoor_outdoor: "indoor"
+    targets:
+      - "One valid Pikachu OR Eevee wearable head item (branding visible)."
+    verification: "Include shelf/rack context in photo."
+    speed_note: "Clearer official tag = brag if simultaneous."
+
+  - id: 7
+    title: Pokédex Character Trio
+    location: "Figure / plush section"
+    suggested_location: "Critical Hit (Queen St) collectibles area"
+    address: "(Verify Critical Hit current address)"
+    backups:
+      - name: "Minotaur figures & plush aisle"
+        note: "If Critical Hit closed"
+      - name: "EB/Zing collectibles wall"
+        note: "If needing more variety"
+    route_note: "Second distinct geek venue broadens selection before books."
+    indoor_outdoor: "indoor"
+    targets:
+      - "Starter line member (any generation)."
+      - "Electric type (distinct from starter if starter is Electric)."
+      - "Legendary or Mythical (clearly labeled / iconic)."
+    constraints:
+      - "Distinct physical products or clearly different prints."
+    speed_note: "Earliest debut generation = brag tie-break."
+
+  - id: 8
+    title: Dymocks Dash
+    location: "Dymocks Melbourne"
+    suggested_location: "Primary floor (fantasy & graphic novel sections)"
+    address: "234 Collins St, Melbourne VIC 3000"
+    backups:
+      - name: "Readings Emporium"
+        note: "If Dymocks unexpectedly closed"
+      - name: "Elizabeth St secondhand bookshop"
+        note: "Adjust categories if needed"
+    route_note: "Short eastward shift along Collins from Minotaur cluster."
+    indoor_outdoor: "indoor"
+    targets:
+      - "The Silmarillion (title legible)."
+      - "Vampire-themed manga/graphic novel volume."
+      - "Book by an author named Mon / Monisha (any genre)."
+    speed_note: "Non-fiction companion clarity = brag if simultaneous."
+
+  - id: 9
+    title: Tram Quick Grab
+    location: "Tram stop"
+    suggested_location: "Collins St (Town Hall / Swanston stop)"
+    address: "Collins St & Swanston St, Melbourne VIC 3000"
+    backups:
+      - name: "Bourke St Mall stop"
+        note: "High tram frequency for quick capture"
+      - name: "Flinders & Swanston intersection"
+        note: "If route timing shifts south"
+    route_note: "Natural pivot after Dymocks while moving toward laneway relax."
+    indoor_outdoor: "outdoor"
+    targets:
+      - "Photo of moving tram with legible route number."
+    speed_note: "Sharper route number = brag only."
+
+  - id: 10
+    title: Cozy Stop Rule
+    location: "Laneway bar / tea / chocolate shop"
+    suggested_location: "Hardware Lane small café/bar mid-block"
+    address: "Hardware Ln, Melbourne VIC 3000"
+    backups:
+      - name: "Patricia Coffee Brewers (Little Bourke)"
+        note: "Standing quick reset if seating scarce"
+      - name: "Manchester Press (Rankins Ln)"
+        note: "If you want bagel + space"
+    route_note: "Intentional decompression before last stretch."
+    indoor_outdoor: "indoor"
+    cooperative: true
+    targets:
+      - "Agree on a simple rule (e.g., no phones / no adjectives)."
+      - "Maintain rule through ordering + consumption."
+    note: "If rule broken prematurely, that target not scored for breaker."
+
+  - id: 11
+    title: Metroidvania Finder Race
+    location: "Video game retailer"
+    suggested_location: "EB Games + Zing (Swanston St)"
+    address: "67 Swanston St, Melbourne VIC 3000"
+    backups:
+      - name: "JB Hi-Fi Games (Bourke St Mall)"
+        note: "If EB crowded / stock thin"
+      - name: "Retro cabinet (if inside Minotaur)"
+        note: "Fallback if stock variance needed"
+    route_note: "Short return toward Swanston from laneway."
+    indoor_outdoor: "indoor"
+    targets:
+      - "Photo of a qualifying Metroidvania title (case or shelf label)."
+      - "One-sentence justification citing exploration + ability/upgrade gate + backtracking."
+    acceptable_examples: ["Hollow Knight", "Ori and the Will of the Wisps", "Metroid Dread", "Castlevania collection", "Blasphemous", "Axiom Verge"]
+    disallowed:
+      - "Pure linear platformers"
+      - "Roguelikes without persistent map-based progression"
+    speed_note: "First valid pair = brag only."
+
+  - id: 12
+    title: Adult Novelty Oddity
+    location: "Adult toy store (discreet CBD location)"
+    suggested_location: "ADG Adult Toys"
+    address: "(Confirm exact current CBD address for ADG Adult Toys)"
+    backups:
+      - name: "Club X Bourke St"
+        note: "If ADG unavailable"
+      - name: "Describe-only fallback"
+        note: "If photos disallowed, use description + mutual acceptance"
+    route_note: "Humour spike before rooftop vista."
+    indoor_outdoor: "indoor"
+    sensitivity: "Respect privacy; confirm photo policy first."
+    objective: "Strangest dildo / novelty adult item (unusual shape/theme/gimmick)."
+    etiquette:
+      - "Be respectful; no mocking staff or loud commentary."
+      - "Ask permission if store policy unclear about photos (if refused, describe item verbally and both accept)."
+    verification: "Photo (or agreed verbal description if photos disallowed)."
+    targets:
+      - "One photo (or accepted description) of a 'strange' novelty item."
+    vote_note: "Mutual vote for brag only; coin flip if deadlock."
+    discretion_note: "Keep phones low; avoid capturing other patrons."
+
+  - id: 13
+    title: Rooftop Contrast Pair
+    location: "Rooftop / upper-level view"
+    suggested_location: "Rooftop Bar (Curtin House)"
+    address: "252 Swanston St, Melbourne VIC 3000"
+    backups:
+      - name: "QT Melbourne rooftop"
+        note: "If Curtin House queue long"
+      - name: "Indoor atrium elevated view"
+        note: "Weather fallback"
+    route_note: "Golden-hour attempt if timing aligns."
+    indoor_outdoor: "outdoor"
+    targets:
+      - "Heritage vs modern single frame."
+      - "Lines contrast: vertical vs horizontal emphasis shot."
+    weather_alt: "Indoor elevated atrium acceptable."
+    aesthetic_note: "Strongest contrast brag only."
+
+  - id: 14
+    title: Ice Cream Victory Lap
+    location: "Gelato / dessert spot (end point)"
+    suggested_location: "Pidapipó or Gelato Messina (central)"
+    address: "Central CBD (confirm current operating site)"
+    backups:
+      - name: "Gelatissimo Bourke St"
+        note: "Extended hours backup"
+      - name: "Aqua S / alternate dessert bar"
+        note: "If gelato lines extreme"
+    route_note: "Cool-down cooperative finale after rooftop descent."
+    indoor_outdoor: "indoor"
+    cooperative: true
+    targets:
+      - "Choose a flavor you haven't had in the last year (or new combo)."
+      - "Joint cheers photo together."
+    note: "No speed element—cool-down."
+
+tracking_tip: "Make a grid: rows = challenge IDs; columns = targets enumerated. Tick each you complete. Sum ticks + finish bonus (if earned)."
+finish: "If all challenges attempted and done under 165 minutes, each adds +2 bonus points."
+winner_rule: "Higher total targets + finish bonus (if gained) wins. Tie -> earliest time of final target completion. Remaining tie -> mutual victory."
