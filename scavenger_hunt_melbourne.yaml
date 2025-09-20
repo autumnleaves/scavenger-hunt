@@ -38,6 +38,7 @@ scoring:
 challenges:
   - id: 1
     title: Lines & Letter Launch
+    long_description: "Kick off the hunt at an iconic civic space. You are primed to look for deliberate architectural design choices: strong leading lines and bold typography. These first two photographic targets warm up observational skills you will reuse all day."
     location: "Federation Square"
     suggested_location: "Federation Square – Main Plaza near ACMI facade"
     address: "Swanston St & Flinders St, Melbourne VIC 3000"
@@ -54,10 +55,12 @@ challenges:
       - short: "Letter 'M' capture"
         detail: "Photo of an existing physical, printed, mounted, engraved, carved or painted capital 'M' found on-site (signage, plaque, sculpture). No drawing, typing, tracing in condensation, or forming it with hands. Crop so the 'M' is legible."
     definition_note: "Architectural line = continuous structural/design edge (façade corner, roofline, beam, rail, deliberate paving alignment or sweeping designed curve) guiding the eye; NOT shadows, temporary objects, cables, people queues, random cracks."
-    speed_note: "Optional brag only: first to present valid 'M' can crow; no extra points."
+  bonus:
+      description: "First to present a valid 'M' photo earns brag only (no points)."
 
   - id: 2
     title: Hosier Lane Photo Set
+    long_description: "Dive into Melbourne’s most photographed graffiti laneway—but look with constraints. Each target pushes you to classify: subject matter, colour dominance, medium (stencil) and iconography. Curating a diverse micro‑collection trains visual scanning speed."
     location: "Hosier Lane"
     suggested_location: "Hosier Lane – enter from Flinders Ln near Russell St"
     address: "Hosier Ln, Melbourne VIC 3000"
@@ -81,10 +84,12 @@ challenges:
         detail: "Any piece featuring a stylized crown shape (≥3 points). Could be above a name or incorporated in a character. Must be intentional, not random triangles."
     rules: "Each player must photograph all 5 targets."
     success_condition: "Score 1 point per listed target you personally capture."
-    speed_note: "If one finishes all 5 first, just bragging rights."  
+  bonus:
+      description: "First to finish all five targets earns bragging rights only."  
 
   - id: 3
     title: Twin Cup Taste Trial
+    long_description: "Side‑by‑side comparison sharpens taste memory. Holding drink style constant while changing venue creates a tiny controlled experiment—then you test palate recall with a blind reveal."
     location: "Degraves / Centre Place"
     suggested_location: "Degraves St pair of small specialty cafes (e.g., Cup of Truth + nearby)"
     address: "Degraves St, Melbourne VIC 3000"
@@ -103,10 +108,12 @@ challenges:
       - short: "Blind ranking"
         detail: "Each player tastes both (eyes closed / swapped position) then writes a secret A/B preference. On reveal both show ranking simultaneously. Completion = both rankings shown (agreement not required)."
     ritual: "Keep ranking carded until both ready; announcement = reveal."
-    speed_note: "If latte art debate: clearer art earns informal brag only."
+  bonus:
+      description: "If simultaneous completion, clearer latte art = brag only."
 
   - id: 4
     title: Dome & Detail Duel
+    long_description: "Zoom out for grand architectural volume, then zoom in to isolate repeating geometry. The rapid scale switch builds compositional agility and pattern awareness."
     location: "State Library Dome"
     suggested_location: "La Trobe Reading Room (dome) upper level rail"
     address: "328 Swanston St, Melbourne VIC 3000"
@@ -126,6 +133,7 @@ challenges:
 
   - id: 5
     title: Minotaur Multiverse Mix
+    long_description: "Retail multiverse safari: find a specific occult antihero, gauge tone via a suggestive figurine, then time‑travel with a retro franchise artifact—sampling decades of pop culture quickly."
     location: "Minotaur Entertainment"
     suggested_location: "Main comics & figurines floor"
     address: "264 Little Collins St, Melbourne VIC 3000"
@@ -144,10 +152,12 @@ challenges:
       - short: "Retro franchise item"
         detail: "Merch representing a franchise whose first release predates year 2000 (game, film, comic). Show item plus enough packaging/logo to confirm origin."
     etiquette: "Avoid blocking aisles; no flash on reflective packaging."
-    speed_note: "First to complete trio = brag only."
+  bonus:
+      description: "First to complete all three items = brag only."
 
   - id: 6
     title: Pokémon Wearable Hunt
+    long_description: "Focused licensed-item detection: rapidly scan apparel racks for a narrowly defined Pokémon head wearable—training selective attention amidst merchandise noise."
     location: "Pop culture / anime or game merch store"
     suggested_location: "Moko Select (anime/merch boutique)"
     address: "(Verify current CBD address for Moko Select)"
@@ -162,10 +172,12 @@ challenges:
       - short: "Pikachu/Eevee head wearable"
         detail: "A hat, headband, hood, beanie, cap, or ears featuring Pikachu OR Eevee (official branding tag or recognizable licensed design). Single photo with product context (shelf/rack)."
     verification: "Include shelf/rack context in photo."
-    speed_note: "Clearer official tag = brag if simultaneous."
+  bonus:
+      description: "If simultaneous, clearer official branding tag earns brag only."
 
   - id: 7
     title: Pokédex Character Trio
+    long_description: "Fast taxonomy triad: assemble a mini set spanning starter line heritage, elemental identity, and rarity tier—reinforcing categorical recall under mild time pressure."
     location: "Figure / plush section"
     suggested_location: "Critical Hit (Queen St) collectibles area"
     address: "(Verify Critical Hit current address)"
@@ -185,10 +197,12 @@ challenges:
         detail: "Item depicting a Legendary or Mythical Pokémon (box art icon, label, or unmistakable design: e.g., Mewtwo, Rayquaza, Arceus)."
     constraints:
       - "Distinct physical products or clearly different prints."
-    speed_note: "Earliest debut generation = brag tie-break."
+  bonus:
+      description: "Tie-break brag: item whose Pokémon debuted in the earliest generation."
 
   - id: 8
     title: Dymocks Dash
+    long_description: "Cross-genre shelf survey: pivot from classic legend to vampiric narrative to onomastic (name) pattern hunt—sharpening scanning modes back-to-back."
     location: "Dymocks Melbourne"
     suggested_location: "Primary floor (fantasy & graphic novel sections)"
     address: "234 Collins St, Melbourne VIC 3000"
@@ -202,14 +216,16 @@ challenges:
     targets:
       - short: "The Silmarillion"
         detail: "Locate any edition where the cover spine or front clearly reads ‘The Silmarillion’. Anthologies with excerpt don't count."
-      - short: "Vampire manga/graphic novel"
+      - short: "Vampire Manga or Graphic Novel"
         detail: "A bound volume (manga or Western GN) where vampires are central (title art, synopsis, or obvious character)."
-      - short: "Author named Mon/Monisha"
-        detail: "Book whose credited author first name starts with 'Mon' (Mon, Mona, Monique, Monisha, etc.). Show cover with name legible."
-    speed_note: "Non-fiction companion clarity = brag if simultaneous."
+      - short: "Author is Mon"
+        detail: "Book whose credited author first name is Mon or Monisha. Show cover with name legible."
+  bonus:
+      description: "If simultaneous, clearest non-fiction companion pick earns brag only."
 
   - id: 9
     title: Tram Quick Grab
+    long_description: "Micro motion capture: compose a moving subject with legible route data—balancing timing, framing, and readability in a dynamic urban slice."
     location: "Tram stop"
     suggested_location: "Collins St (Town Hall / Swanston stop)"
     address: "Collins St & Swanston St, Melbourne VIC 3000"
@@ -223,10 +239,12 @@ challenges:
     targets:
       - short: "Moving tram + route"
         detail: "Action shot of a tram in motion (blur acceptable) where the route number (or alphanumeric code) is readable. Stationary at full stop does NOT count; slight roll acceptable."
-    speed_note: "Sharper route number = brag only."
+  bonus:
+      description: "Sharper/most legible route number in motion earns brag only."
 
   - id: 10
     title: Cozy Stop Rule
+    long_description: "Intentional decompression: inject a cooperative constraint to reset pacing, encourage playful mindfulness, and prevent cognitive fatigue before the final arc."
     location: "Laneway bar / tea / chocolate shop"
     suggested_location: "Hardware Lane small café/bar mid-block"
     address: "Hardware Ln, Melbourne VIC 3000"
@@ -247,6 +265,7 @@ challenges:
 
   - id: 11
     title: Metroidvania Finder Race
+    long_description: "Mechanic literacy sprint: identify a genre exemplar then articulate gating/backtracking logic—reinforcing systems thinking, not just box art recognition."
     location: "Video game retailer"
     suggested_location: "EB Games + Zing (Swanston St)"
     address: "67 Swanston St, Melbourne VIC 3000"
@@ -260,16 +279,16 @@ challenges:
     targets:
       - short: "Metroidvania title"
         detail: "Photo of game box / shelf label recognized as Metroidvania (progression via acquiring abilities that unlock earlier unreachable areas). Collection compilations okay if at least one included qualifies."
-      - short: "Justification"
-        detail: "One clear sentence naming the gating mechanic (e.g., ‘Double jump unlock opens earlier vertical shafts’) AND referencing exploration/backtracking. Must be specific, not generic."
     acceptable_examples: ["Hollow Knight", "Ori and the Will of the Wisps", "Metroid Dread", "Castlevania collection", "Blasphemous", "Axiom Verge"]
     disallowed:
       - "Pure linear platformers"
       - "Roguelikes without persistent map-based progression"
-    speed_note: "First valid pair = brag only."
+  bonus:
+    description: "Most obscure qualifying Metroidvania title found earns bragging rights only."
 
   - id: 12
     title: Adult Novelty Oddity
+    long_description: "Boundary-aware humor: brief dip into transgressive design artifacts—balancing curiosity, respect, and descriptive precision."
     location: "Adult toy store (discreet CBD location)"
     suggested_location: "ADG Adult Toys"
     address: "(Confirm exact current CBD address for ADG Adult Toys)"
@@ -294,6 +313,7 @@ challenges:
 
   - id: 13
     title: Rooftop Contrast Pair
+    long_description: "Vertical perspective shift: height amplifies architectural dialogue—train eye to juxtapose eras and directional line families in a single cohesive frame."
     location: "Rooftop / upper-level view"
     suggested_location: "Rooftop Bar (Curtin House)"
     address: "252 Swanston St, Melbourne VIC 3000"
@@ -314,6 +334,7 @@ challenges:
 
   - id: 14
     title: Ice Cream Victory Lap
+    long_description: "Sweet cooperative closure: sensory treat plus reflective cadence—locks in memory peak and shared accomplishment narrative."
     location: "Gelato / dessert spot (end point)"
     suggested_location: "Pidapipó or Gelato Messina (central)"
     address: "Central CBD (confirm current operating site)"
